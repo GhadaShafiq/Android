@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.project.NewMember"
+    android:layout_margin="0dp"
+    android:gravity="center"
+    android:theme="@style/AppTheme"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/id"
+        android:id="@+id/id"
+        android:padding="10dp"
+        android:layout_above="@+id/name"
+        android:layout_alignStart="@+id/name" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:id="@+id/name"
+        android:padding="10dp"
+        android:layout_below="@+id/txtid"
+        android:layout_alignStart="@+id/gender" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender"
+        android:id="@+id/gender"
+        android:padding="10dp"
+        android:layout_below="@+id/txtname"
+        android:layout_alignStart="@+id/age" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/age"
+        android:id="@+id/age"
+        android:padding="10dp"
+        android:layout_below="@+id/group1"
+        android:layout_alignParentStart="true" />
+<EditText
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/txtid"
+    android:padding="10dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignStart="@+id/txtname" />
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtname"
+        android:layout_below="@+id/txtid"
+        android:layout_toEndOf="@+id/gender"
+        android:padding="10dp"/>
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spn"
+        android:padding="10dp"
+        android:layout_below="@+id/txtname"
+        android:layout_toEndOf="@+id/gender"
+        android:entries="@array/genderArray"
+        >
+    </Spinner>
+    <RadioGroup android:id="@+id/group1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_below="@+id/gender"
+        android:layout_toEndOf="@+id/gender"
+        >
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/staff"
+        android:text="@string/staff"
+        android:padding="10dp"
+        android:checked="true"
+      />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/std"
+        android:text="@string/std"
+        android:padding="10dp"
+      />
+</RadioGroup>
+
+    <SeekBar
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sekbar"
+        android:max="60"
+        android:progress="18"
+        android:padding="10dp"
+        android:layout_below="@+id/group1"
+        android:layout_alignStart="@+id/btnSave"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSave"
+        android:text="@string/btnsave"
+        android:layout_below="@+id/sekbar"
+        android:layout_toEndOf="@+id/gender"
+        android:padding="5dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnClose"
+        android:text="@string/btnclose"
+        android:padding="5dp"
+        android:layout_below="@+id/sekbar"
+        android:layout_alignEnd="@+id/sekbar"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        />
+
+    <TextView
+        android:id="@+id/agenum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:visibility="visible"
+        android:layout_alignBaseline="@+id/age"
+        android:layout_alignBottom="@+id/age"
+        android:layout_toEndOf="@+id/group1" />
+
+</RelativeLayout>
